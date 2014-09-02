@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.example.android.BluetoothChat.MoveButtonView
+        android:id="@+id/moveButtonView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="240dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/moveButtonView1"
+        android:layout_alignParentBottom="true"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/down_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/in"
+        android:text="@string/down_button" />
+
+    <Button
+        android:id="@+id/up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/down_button"
+        android:layout_alignLeft="@+id/down_button"
+        android:layout_toLeftOf="@+id/in"
+        android:text="@string/up_button" />
+
+</RelativeLayout>
